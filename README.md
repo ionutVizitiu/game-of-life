@@ -1,4 +1,23 @@
-# Gol
+# Game of life
+
+This is a small implementation of John Horton Conway's "Game of Life" using Angular.
+
+In this stage, the user can:
+- configure the canvas (width, height, colors, frames per second)
+- start a game with random cells
+- see the next generation
+- start the game in autoplay mode
+- stop the autoplay mode
+
+
+## Start the project
+Clone the project: `git clone https://github.com/ionutVizitiu/game-of-life.git`
+Go inside the project: `cd game-of-life`
+Run the project: `ng serve -o`
+See it in action
+
+## Future features
+- select cells to begin with
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
