@@ -10,12 +10,12 @@ In this stage, the user can:
 - stop the autoplay mode
 
 
-## Start the project
-Clone the project: `git clone https://github.com/ionutVizitiu/game-of-life.git`
-Go inside the project: `cd game-of-life`
-Install dependencies: `npm i`
-Run the project: `ng serve -o`
-See it in action
+## Run the project
+clone the project: `git clone https://github.com/ionutVizitiu/game-of-life.git`  
+go inside the project: `cd game-of-life`  
+install dependencies: `npm i`  
+run the project: `ng serve -o`  
+see it in action  
 
 ## Future features
 - select cells to begin with
