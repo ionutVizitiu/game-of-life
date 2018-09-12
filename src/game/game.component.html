@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="configuration-container">
+    <h1>Game of life</h1>
+
+    <mat-list dense>
+      <h3 matSubheader>Rules</h3>
+      <mat-list-item> Any live cell with fewer than two live neighbors dies, as if by under population. </mat-list-item>
+      <mat-list-item> Any live cell with two or three live neighbors lives on to the next generation. </mat-list-item>
+      <mat-list-item> Any live cell with more than three live neighbors dies, as if by overpopulation. </mat-list-item>
+      <mat-list-item>
+        Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+      </mat-list-item>
+    </mat-list>
+
+    <mat-divider></mat-divider>
+
+    <h3>Configure your canvas game</h3>
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Canvas width"
+             [(ngModel)]="canvasWidth">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Canvas height"
+             [(ngModel)]="canvasHeight">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Number of grid columns"
+             [(ngModel)]="gridCols">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Frames per second"
+             [(ngModel)]="framesPerSecond">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Cell fill color"
+             [(ngModel)]="cellColor">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Grid stroke color"
+             [(ngModel)]="cellStrokeColor">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Grid stroke color"
+             [(ngModel)]="cellStrokeColor">
+    </mat-form-field>
+
+    <!-- <mat-radio-group [(ngModel)]="randomCells">
+      <mat-radio-button [value]="false">Start by choosing the cells yourself</mat-radio-button>
+      <mat-radio-button [value]="true">Start with random cells</mat-radio-button>
+    </mat-radio-group> -->
+
+    <button mat-raised-button
+            (click)="loadCanvas()">Load canvas</button>
+  </div>
+
+  <div class="game-containter"
+       [hidden]="!canvasPrepared">
+    <h3>Play the game</h3>
+
+    <div class="buttons">
+      <button mat-raised-button
+              (click)="getNextGeneration()">See next generation</button>
+    </div>
+
+    <div class="buttons">
+      <button mat-raised-button
+              (click)="startAutoplay()">Start autoplay</button>
+
+      <button mat-raised-button
+              (click)="stopAutoplay()">Stop autoplay</button>
+    </div>
+
+    <canvas #canvas
+            [width]="canvasWidth"
+            [height]="canvasHeight"></canvas>
+  </div>
+</div>
